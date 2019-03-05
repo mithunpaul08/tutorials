@@ -16,6 +16,7 @@ allennlp train tutorials/getting_started/walk_through_allennlp/simple_tagger.jso
 
 - Note that in the [initial tutorial](https://allennlp.org/tutorials) what they are doing is create a wrapper on the MODEL class for [simple_tagger](https://github.com/allenai/allennlp/blob/master/allennlp/models/simple_tagger.py)
 - which means you are writing a bunch of read data, create their custom classes which are needed to run this model.
+- What that means is if you want to use the simple_tagger instead of the lstm_tagger they have provided in the [tutorial](https://allennlp.org/tutorials) page, all you have to do is replace the [lstm_tagger](https://github.com/allenai/allennlp/blob/master/tutorials/tagger/basic_allennlp.py#L153) with the simple tagger class given [here](https://github.com/allenai/allennlp/blob/master/allennlp/models/simple_tagger.py#L19).
 
 
 
