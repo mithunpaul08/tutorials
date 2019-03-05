@@ -1,8 +1,8 @@
 [Allennlp](https://github.com/allenai/allennlp) is no different when it comes to writing complex documentation which a common man takes hours to understand. Here are some points which took me a long time to figure out. Just in case it helps someone.
 
-## Quick steps to get the POS tagger to run with allennlp
+## Qn) Don't feel like reading a tutorial, I want to see something running. How?
 
-### if you don't want to go through their tutorial but really want to see something run:
+### Ans: Quick steps to get the POS tagger to run with allennlp (i.e if you don't want to go through their tutorial but really want to see something running):
 ```
 mkdir allenlp
 cd allennlp
@@ -10,9 +10,12 @@ git clone https://github.com/allenai/allennlp/tree/master/tutorials/tagger . (do
 allennlp train tutorials/getting_started/walk_through_allennlp/simple_tagger.json --serialization-dir /tmp/tutorials/getting_started
 ```
 
-Some things you need to know before reading their beginner [tutorial](https://allennlp.org/tutorials)
+## Qn) Fine. Now I want to try out running a basic model they have written in PyTorch. What all do I need to do?
+
+### Ans: Some things you need to know before reading their beginner [tutorial](https://allennlp.org/tutorials)
 
 - Note that in the [initial tutorial](https://allennlp.org/tutorials) what they are doing is create a wrapper on the MODEL class for [simple_tagger](https://github.com/allenai/allennlp/blob/master/allennlp/models/simple_tagger.py)
+- which means you are writing a bunch of read data, create their custom classes which are needed to run this model.
 
 
 
