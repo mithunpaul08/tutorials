@@ -60,7 +60,8 @@ The first two part of the table of contents in [this](https://github.com/allenai
 - create another file called da.jsonnet
 - copy paste everything from [this](https://github.com/allenai/allennlp/blob/master/training_config/decomposable_attention.jsonnet) file here
 - replace the `train_data_path` and `validation_data_path` paths to your own data. Better you copy it over to this folder.
-
+- from command line type
+`allennlp train decomposable_attention.jsonnet --serialization-dir /tmp/da`
 
 ## Qn) I get the error `allennlp.common.checks.ConfigurationError: "The serialization directory already exists but doesn't contain a config.json. You probably gave the wrong directory.` 
 What does that mean?
