@@ -1,4 +1,6 @@
-[Allennlp](https://github.com/allenai/allennlp) is no different when it comes to writing complex documentation which a common man takes hours to understand. Here are some points which took me a long time to figure out. Just in case it helps someone.
+[Allennlp](https://github.com/allenai/allennlp) is no different when it comes to writing complex documentation which a common man takes hours to understand. Plus you don't really have time to write up their basic tutorial and learn. You would rather learn on the way. If yes, here are some points which took me a long time to figure out. Just in case it helps someone. I went level by level where 
+
+# level1-Basic:
 
 ## Qn) Don't feel like reading a tutorial, I want to see something running. How?
 
@@ -12,12 +14,16 @@ allennlp train tutorials/getting_started/walk_through_allennlp/simple_tagger.jso
 
 ## Qn) Fine. Now I want to try out running a basic model they have written in PyTorch. What all do I need to do?
 
-### Ans: Some things you need to know before reading their beginner [tutorial](https://allennlp.org/tutorials)
+### Ans: 
 
+I'd usually suggest trying out their beginner tutorial. But here are some things you need to know before reading their beginner [tutorial](https://allennlp.org/tutorials)
+
+Extra Info:
 - Note that in the [initial tutorial](https://allennlp.org/tutorials) what they are doing is create a wrapper on the MODEL class for [simple_tagger](https://github.com/allenai/allennlp/blob/master/allennlp/models/simple_tagger.py)
 - which means you are writing a bunch of read data, create their custom classes which are needed to run this model.
 - What that means is if you want to use the simple_tagger instead of the lstm_tagger they have provided in the [tutorial](https://allennlp.org/tutorials) page, all you have to do is replace the [lstm_tagger](https://github.com/allenai/allennlp/blob/master/tutorials/tagger/basic_allennlp.py#L153) with the simple tagger class given [here](https://github.com/allenai/allennlp/blob/master/allennlp/models/simple_tagger.py#L19).
 
+### or try this:
 
 ## Qn) I want to run one of the off the shelf models with the data set they have provided. what to do? 
 ```
@@ -36,17 +42,17 @@ for example if you want to run decomposable attention over SNLI data, use [this]
 ## Ans: 
 Open the config [file](https://github.com/allenai/allennlp/blob/master/training_config/decomposable_attention.jsonnet) and change the `"cuda_device": -1`
 
-## Qn) ok am reading to feed in my own data. How do I do that?
+## Qn) ok am ready to feed in my own data. How do I do that?
 
-## Ans:
+## Ans: 
+Its time for # level2-Intermediate. 
+Read [this](https://github.com/allenai/allennlp/blob/master/tutorials/getting_started/predicting_paper_venues/predicting_paper_venues_pt1.md) tutorial
 
 ## Qn) I get the error `allennlp.common.checks.ConfigurationError: "The serialization directory already exists but doesn't contain a config.json. You probably gave the wrong directory.` 
 What does that mean?
 
 ## Ans: do `rm -rf output_path` and run the command again.
 
-
-output_path = os.path.join(tempdir, "output.txt")
 
 Basic links/commands to install allnenlp are here
 The very first get your hands dirty tutorial is here. Note that this is showing you how to write a model from scratch. Which in this case is an LSTM bAsed pos tagger whose actual code is here
