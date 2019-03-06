@@ -57,6 +57,9 @@ The first two part of the table of contents in [this](https://github.com/allenai
 - copy everything from [this](https://github.com/allenai/allennlp/blob/master/tutorials/tagger/basic_allennlp.py) to wrapper_model.py
 - replace the model class part (i.e from line [153](https://github.com/allenai/allennlp/blob/master/tutorials/tagger/basic_allennlp.py#L153) to line [257](https://github.com/allenai/allennlp/blob/master/tutorials/tagger/basic_allennlp.py#L227) with the class of hte model you want to use. For example [here](https://github.com/allenai/allennlp/blob/master/allennlp/models/decomposable_attention.py) is the  corresponding class for Decomposable Attention model.
 - remember to copy in the missing imoprt statements too from the class file
+- create another file called da.jsonnet
+- copy paste everything from [this](https://github.com/allenai/allennlp/blob/master/training_config/decomposable_attention.jsonnet) file here
+- replace the `train_data_path` and `validation_data_path` paths to your own data. Better you copy it over to this folder.
 
 
 ## Qn) I get the error `allennlp.common.checks.ConfigurationError: "The serialization directory already exists but doesn't contain a config.json. You probably gave the wrong directory.` 
