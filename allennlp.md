@@ -33,7 +33,8 @@ for example if you want to run decomposable attention over SNLI data, use [this]
 
 ## Qn) Running the above says its expecting GPU, but I don't have one?
 
-## Ans: Open the config [file](https://github.com/allenai/allennlp/blob/master/training_config/decomposable_attention.jsonnet) and change the `"cuda_device": -1`
+## Ans: 
+Open the config [file](https://github.com/allenai/allennlp/blob/master/training_config/decomposable_attention.jsonnet) and change the `"cuda_device": -1`
 
 Basic links/commands to install allnenlp are here
 The very first get your hands dirty tutorial is here. Note that this is showing you how to write a model from scratch. Which in this case is an LSTM bAsed pos tagger whose actual code is here
