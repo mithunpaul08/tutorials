@@ -19,6 +19,11 @@ allennlp train tutorials/getting_started/walk_through_allennlp/simple_tagger.jso
 - What that means is if you want to use the simple_tagger instead of the lstm_tagger they have provided in the [tutorial](https://allennlp.org/tutorials) page, all you have to do is replace the [lstm_tagger](https://github.com/allenai/allennlp/blob/master/tutorials/tagger/basic_allennlp.py#L153) with the simple tagger class given [here](https://github.com/allenai/allennlp/blob/master/allennlp/models/simple_tagger.py#L19).
 
 
+Qn) I have custom
+
+Ans: A list of allennlp's ready to go models are kept [here](https://allennlp.org/models). Note that all you can change here is the config parameters, i.e epochs, patience etc. If you want to instead feed it your own data, you will write a Dataset reader yourself.
+
+for example if you want to run decomposable attention over SNLI data, use [this](https://s3-us-west-2.amazonaws.com/allennlp/models/decomposable-attention-elmo-2018.02.19.tar.gz) model.
 
 Basic links/commands to install allnenlp are here
 The very first get your hands dirty tutorial is here. Note that this is showing you how to write a model from scratch. Which in this case is an LSTM bAsed pos tagger whose actual code is here
