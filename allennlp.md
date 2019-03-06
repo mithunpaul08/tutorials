@@ -36,6 +36,18 @@ for example if you want to run decomposable attention over SNLI data, use [this]
 ## Ans: 
 Open the config [file](https://github.com/allenai/allennlp/blob/master/training_config/decomposable_attention.jsonnet) and change the `"cuda_device": -1`
 
+## Qn) ok am reading to feed in my own data. How do I do that?
+
+## Ans:
+
+## Qn) I get the error `allennlp.common.checks.ConfigurationError: "The serialization directory already exists but doesn't contain a config.json. You probably gave the wrong directory.` 
+What does that mean?
+
+## Ans: do `rm -rf output_path` and run the command again.
+
+
+output_path = os.path.join(tempdir, "output.txt")
+
 Basic links/commands to install allnenlp are here
 The very first get your hands dirty tutorial is here. Note that this is showing you how to write a model from scratch. Which in this case is an LSTM bAsed pos tagger whose actual code is here
 I’d personally suggest don’t waste time on it, if you are trying to run an existing model. Instead jumpt to level 2
