@@ -45,8 +45,19 @@ Open the config [file](https://github.com/allenai/allennlp/blob/master/training_
 ## Qn) ok am ready to feed in my own data. How do I do that?
 
 ## Ans: 
-Its time for # level2-Intermediate. 
-Read [this](https://github.com/allenai/allennlp/blob/master/tutorials/getting_started/predicting_paper_venues/predicting_paper_venues_pt1.md) tutorial
+Its time for 
+# level2-Intermediate. 
+
+## If you want to read their tutorial and get bored.
+The first two part of the table of contents in [this](https://github.com/allenai/allennlp/tree/master/tutorials) page is what I already made you guys do. Now for the data part read [this](https://github.com/allenai/allennlp/blob/master/tutorials/getting_started/predicting_paper_venues/predicting_paper_venues_pt1.md) tutorial
+
+## or If you want to just get going.
+- create a new python project
+- create a file called wrapper_model.py
+- copy everything from [this](https://github.com/allenai/allennlp/blob/master/tutorials/tagger/basic_allennlp.py) to wrapper_model.py
+- replace the model class part (i.e from line [153](https://github.com/allenai/allennlp/blob/master/tutorials/tagger/basic_allennlp.py#L153) to line [257](https://github.com/allenai/allennlp/blob/master/tutorials/tagger/basic_allennlp.py#L227) with the class of hte model you want to use. For example [here](https://github.com/allenai/allennlp/blob/master/allennlp/models/decomposable_attention.py) is the  corresponding class for Decomposable Attention model.
+- remember to copy in the missing imoprt statements too from the class file
+
 
 ## Qn) I get the error `allennlp.common.checks.ConfigurationError: "The serialization directory already exists but doesn't contain a config.json. You probably gave the wrong directory.` 
 What does that mean?
