@@ -30,6 +30,8 @@ Extra Info:
 - which means you are writing a bunch of read data, create their custom classes which are needed to run this model.
 - What that means is if you want to use the simple_tagger instead of the lstm_tagger they have provided in the [tutorial](https://allennlp.org/tutorials) page, all you have to do is replace the [lstm_tagger](https://github.com/allenai/allennlp/blob/master/tutorials/tagger/basic_allennlp.py#L153) with the simple tagger class given [here](https://github.com/allenai/allennlp/blob/master/allennlp/models/simple_tagger.py#L19).
 
+- don't expect all the links to work in any of the tutorial pages. They don't. Instead i'd suggest going to the [docs homepage](https://allenai.github.io/allennlp-docs/) and searching for whatever you had clicked on.
+
 ### or try this:
 
 ## Qn) I want to run one of the off the shelf models with the data set they have provided. what to do? 
@@ -58,6 +60,8 @@ Its time for
 ## If you want to read their tutorial and get bored.
 The first two part of the table of contents in [this](https://github.com/allenai/allennlp/tree/master/tutorials) page is what I already made you guys do. Now for the data part read [this](https://github.com/allenai/allennlp/blob/master/tutorials/getting_started/predicting_paper_venues/predicting_paper_venues_pt1.md) tutorial
 
+**Note: be prepared to go through multiple iterations of both the basic and intermediate tutorials before you can completely understand everything. **
+
 ## or If you want to just get going.
 - create a new python project
 - create a file called wrapper_model.py
@@ -70,14 +74,13 @@ The first two part of the table of contents in [this](https://github.com/allenai
 - from command line type
 `allennlp train decomposable_attention.jsonnet --serialization-dir /tmp/da`
 
-## Qn) I get the error `allennlp.common.checks.ConfigurationError: "The serialization directory already exists but doesn't contain a config.json. You probably gave the wrong directory.` 
+## FAQ
+
+#### Qn) 
+I get the error `allennlp.common.checks.ConfigurationError: "The serialization directory already exists but doesn't contain a config.json. You probably gave the wrong directory.` 
 What does that mean?
 
-## Ans: do `rm -rf output_path` and run the command again.
+#### Ans:
+do `rm -rf output_path` and run the command again.
 
-
-Basic links/commands to install allnenlp are here
-The very first get your hands dirty tutorial is here. Note that this is showing you how to write a model from scratch. Which in this case is an LSTM bAsed pos tagger whose actual code is here
-I’d personally suggest don’t waste time on it, if you are trying to run an existing model. Instead jumpt to level 2
-All the files you will need (including the data files and config files ) for the POS tagger project is kept here
 
